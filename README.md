@@ -1,4 +1,4 @@
-# Vue3 Webpack Template
+# 2022 Spring Creative Product Design Shinsu
 
 - Webpack + Babel + PostCSS(SCSS)
 - Vue3 + Vuex + Vue-Router
