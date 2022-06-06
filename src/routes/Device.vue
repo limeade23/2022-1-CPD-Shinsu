@@ -4,6 +4,7 @@
     <div class="qrcode">
       <img src="https://via.placeholder.com/80" alt="qr-code" />
     </div>
+
     <!-- <img src="status_good_char.png" alt="status-good-char" /> -->
     <ShowStatus />
   </div>

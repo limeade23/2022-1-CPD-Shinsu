@@ -1,5 +1,6 @@
 <template>
   <!-- Water Status Good case -->
+  <button @click="change">테스트</button>
   <div v-if="waterStatus" class="status-box">
     <!-- Showing Char Status -->
     <div class="status-char-img">
@@ -27,11 +28,17 @@
 
 export default {
   // components: { ShowDetail },
+
   data: function () {
     return {
       waterStatus: false,
       model: false,
     };
+  },
+  methods: {
+    change: function () {
+      this.waterStatus = !this.waterStatus;
+    },
   },
 };
 </script>
