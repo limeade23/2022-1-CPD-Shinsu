@@ -1,12 +1,19 @@
 <template>
-  <a-tabs v-model:activeKey="activeKey" centered>
-    <a-tab-pane key="1" tab="수질 정보">
-      <WaterStatusInfo />
-    </a-tab-pane>
-    <a-tab-pane key="2" tab="캠페인" force-render>
-      <Campaign />
-    </a-tab-pane>
-  </a-tabs>
+  <a-layout>
+    <div class="t">
+      <a-tabs v-model:activeKey="activeKey" centered>
+        <a-tab-pane key="1" tab="수질 정보">
+          <WaterStatusInfo />
+        </a-tab-pane>
+        <a-tab-pane key="2" tab="캠페인" force-render>
+          <Campaign />
+        </a-tab-pane>
+      </a-tabs>
+    </div>
+    <a-layout-footer :style="{ textAlign: 'center' }">
+      ©2022 Shinsu
+    </a-layout-footer>
+  </a-layout>
 </template>
 <script>
 import WaterStatusInfo from "../components/WaterStatusInfo.vue";
@@ -28,3 +35,19 @@ export default {
   },
 };
 </script>
+
+<style>
+.t {
+  background-color: white;
+  padding-top: 10px;
+}
+
+.ant-tabs-nav {
+  box-shadow: 1px 1px 5px 1px gray;
+}
+
+.ant-tabs-content-holder {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+</style>
