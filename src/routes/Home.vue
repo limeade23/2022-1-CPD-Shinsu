@@ -11,7 +11,7 @@
       </a-tabs>
     </div>
     <a-layout-footer :style="{ textAlign: 'center' }">
-      ©2022 Shinsu
+      <i class="fa-solid fa-droplet"></i> ©2022 Shinsu
     </a-layout-footer>
   </a-layout>
 </template>

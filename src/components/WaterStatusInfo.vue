@@ -8,7 +8,11 @@
       <p>{{ val.name }}</p>
     </div>
     <div class="content-value content-shadow">
-      <p>{{ val.value }}</p>
+      <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+      <!-- <i class={{ val.icon }}></i> -->
+      <p>
+        {{ val.value }}
+      </p>
     </div>
     <!-- <a href="#" class="content-more">더보기 ></a> -->
   </div>
@@ -22,10 +26,12 @@ export default {
         {
           name: "설치위치",
           value: "한강공원",
+          icon: "fa-solid fa-magnifying-glass",
         },
         {
           name: "수온",
           value: "17.3",
+          icon: "",
         },
         {
           name: "pH",
@@ -50,6 +56,8 @@ export default {
 </script>
 
 <style>
+.fa-solid {
+}
 .content-more {
   float: right;
   margin-bottom: 100px;

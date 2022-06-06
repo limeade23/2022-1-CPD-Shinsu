@@ -1,4 +1,4 @@
-# Vue3 Webpack Template
+# 2022 Spring Creative Product Design Shinsu
 
 - Webpack + Babel + PostCSS(SCSS)
 - Vue3 + Vuex + Vue-Router
@@ -7,11 +7,11 @@
 ## 클론 후 .git 삭제하기
 
 ```bash
-# macOS 
+# macOS
 rm -rf .git
 
 # Windows
-rmdir /s .git 
+rmdir /s .git
 ```
 
 ## 프로젝트 시작 전 패키지 설치

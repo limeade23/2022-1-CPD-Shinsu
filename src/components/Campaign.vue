@@ -22,7 +22,9 @@
     </div>
   </div>
 </template>
+
 <script></script>
+
 <style>
 .campaign-list {
   padding: 5px;
