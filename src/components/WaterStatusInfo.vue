@@ -73,6 +73,7 @@ export default {
   margin-top: 10px;
   margin-left: 10px;
   font-size: 17px;
+  font-weight: 600;
 }
 
 .content-value {

@@ -9,15 +9,18 @@
   </div>
   <div class="campaign-info">
     <div class="bubble">
-      <h1>21%</h1>
-      <img src="status_bubble.png" alt="bubble" />
+      <div class="bubble-percent">
+        <p>21%</p>
+      </div>
+      <img src="status_bubble.png" alt="bubble image" />
+    </div>
+    <div class="campaign-status-ment">
       <p>아직 부족해요!</p>
     </div>
     <div class="campaign-desc">
-      <img id="char" src="char.png" alt="" />
+      <img class="char" src="char.png" alt="" />
       <div class="campaign-text">
-        <p>Earth-U 를 마시면</p>
-        <p>물이 필요한 곳에 기부가 됩니다.</p>
+        <p>Earth-U 를 마시면 <br />물이 필요한 곳에 기부가 됩니다.</p>
       </div>
     </div>
   </div>
@@ -31,60 +34,67 @@
   padding-left: 20px;
   height: 90px;
   box-shadow: 0px 5px 5px 0px gray;
+  margin-bottom: 50px;
 }
 .campaign-info {
   /* background-image: url("../../water_line.png"); */
 }
 
 .bubble {
+  /* position: relative; */
   text-align: center;
+  position: relative;
 }
+
+.bubble-percent {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+  font-weight: 300;
+  margin-bottom: 0;
+  color: #21334a;
+}
+
+.bubble-percent p {
+  margin-bottom: 0;
+}
+
+.campaign-status-ment {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 23px;
+  font-weight: 350;
+  color: #5d7480;
+}
+
 .bubble img {
-  margin-top: 70px;
-  width: 280px;
-  /* float: left;
-  margin-top: 100px;
-  margin-left: 50px;
-  margin-right: auto; */
+  vertical-align: middle;
+  width: 250px;
 }
 
 .campaign-type {
   background-color: black;
   color: white;
-  /* float: left; */
-  /* position: absolute; */
   text-align: center;
   width: 90px;
   height: 25px;
-  /* margin-right: 20px; */
-}
-
-.bubble h1 {
-  /* float: left; */
-  position: absolute;
-  margin-left: 180px;
-  margin-top: 160px;
-  font-size: 60px;
-}
-
-.bubble p {
-  margin-top: 30px;
-  font-size: 25px;
-  color: #5d7480;
 }
 
 .campaign-desc {
   height: 300px;
 }
 
-#char {
+.char {
   /* float: left; */
-  margin-left: 30px;
+  margin-left: 10px;
   height: 250px;
   position: absolute;
 }
 
-#bg-img {
+.bg-img {
   position: fixed;
   bottom: -60px;
   height: 300px;
@@ -93,8 +103,8 @@
 .campaign-text {
   float: right;
   text-align: center;
-  margin-top: 100px;
-  margin-right: 30px;
+  margin-top: 120px;
+  margin-right: 10px;
   font-size: 23px;
 }
 </style>
