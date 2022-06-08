@@ -16,8 +16,8 @@
   </a-layout>
 </template>
 <script>
-import WaterStatusInfo from "../components/WaterStatusInfo.vue";
-import Campaign from "../components/Campaign.vue";
+import WaterStatusInfo from "../components/PageWaterStatusInfo.vue";
+import Campaign from "../components/PageCampaign.vue";
 import { defineComponent, ref } from "vue";
 
 export default {

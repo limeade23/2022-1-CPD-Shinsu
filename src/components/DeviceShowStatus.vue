@@ -1,4 +1,8 @@
 <template>
+  <!-- QR Code -->
+  <div class="qrcode">
+    <img src="https://via.placeholder.com/80" alt="qr-code" />
+  </div>
   <!-- Water Status Good case -->
   <button @click="change">테스트</button>
   <div v-if="waterStatus" class="status-box">
@@ -83,5 +87,15 @@ export default {
 .status-bad {
   background-color: #efd298;
   color: #e17401;
+}
+.qrcode {
+  float: left;
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.qrcode img {
+  width: 80px;
 }
 </style>
