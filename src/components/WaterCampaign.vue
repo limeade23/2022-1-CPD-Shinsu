@@ -20,18 +20,7 @@
 
 <script></script>
 
-<style>
-.campaign-list {
-  padding: 5px;
-  padding-left: 20px;
-  height: 90px;
-  box-shadow: 0px 5px 5px 0px gray;
-  margin-bottom: 50px;
-}
-.campaign-info {
-  /* background-image: url("../../water_line.png"); */
-}
-
+<style scope>
 .bubble {
   /* position: relative; */
   text-align: center;
@@ -84,12 +73,6 @@
   margin-left: 10px;
   height: 250px;
   position: absolute;
-}
-
-.bg-img {
-  position: fixed;
-  bottom: -60px;
-  height: 300px;
 }
 
 .campaign-text {

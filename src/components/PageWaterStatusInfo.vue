@@ -8,8 +8,6 @@
       <p>{{ val.name }}</p>
     </div>
     <div class="content-value content-shadow">
-      <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
-      <!-- <i class={{ val.icon }}></i> -->
       <p>
         {{ val.value }}
       </p>

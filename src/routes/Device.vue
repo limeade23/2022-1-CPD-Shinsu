@@ -1,5 +1,6 @@
 <!-- 물 상태 출력 페이지 -->
 <template>
+  <div class="status-btn" @click="showModal"></div>
   <!-- <div class="tab-content">
     <a-carousel autoplay> 
     <a-carousel :after-change="onChange">
@@ -15,6 +16,7 @@
     </a-carousel>
   </div> -->
   <div class="tab-content">
+    <a-button @click="showModal"> Open modal to close in 5s </a-button>
     <div v-show="currentTab == 0">
       <ShowStatus />
     </div>
@@ -24,20 +26,10 @@
     <div v-show="currentTab == 2">
       <ShowTabwater />
     </div>
+    <a-modal v-model:visible="statusModal" centered>
+      <p>무우우우우울사아아아태에에엥...</p>
+    </a-modal>
   </div>
-  <!-- <div class="tab-content">
-    <a-tabs v-model:activeKey="activeKey" centered>
-      <a-tab-pane key="1" tab="1">
-        <ShowStatus />
-      </a-tab-pane>
-      <a-tab-pane key="2" tab="2" force-render>
-        <ShowCampaign />
-      </a-tab-pane>
-      <a-tab-pane key="3" tab="3" force-render>
-        <ShowTabwater />
-      </a-tab-pane>
-    </a-tabs>
-  </div> -->
 </template>
 
 <script>
@@ -45,11 +37,33 @@ import ShowStatus from "~/components/DeviceShowStatus";
 import ShowCampaign from "~/components/DeviceShowCampaign";
 import ShowTabwater from "~/components/DeviceShowTabwater";
 
+import { defineComponent, ref } from "vue";
+
 export default {
   components: {
     ShowStatus,
     ShowCampaign,
     ShowTabwater,
+  },
+  setup() {
+    const statusModal = ref(false);
+
+    // 모달창 열기
+    const showModal = () => {
+      statusModal.value = true;
+
+      // 모달창 자동 닫기
+      if (statusModal.value == true) {
+        setTimeout(() => {
+          statusModal.value = false;
+        }, 6000);
+      }
+    };
+
+    return {
+      statusModal,
+      showModal,
+    };
   },
   data() {
     return {
@@ -65,18 +79,28 @@ export default {
       this.currentTab++;
       // for Debug
       // console.log(this.currentTab);
-    }, 12000);
+    }, 5000);
   },
 };
 </script>
 
-<style scoped>
-/* .tab-content {
-  width: 480px;
-  height: 800px;
-} */
+<style>
+.status-btn {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  /* visibility: hidden; */
+}
 
-/* For demo */
+.ant-modal-close-x {
+  display: none;
+}
+.ant-modal-footer {
+  display: none;
+}
+</style>
+
+<style scoped>
 .ant-carousel :deep(.slick-slide) {
   text-align: center;
   height: 800px;

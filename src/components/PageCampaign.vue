@@ -1,102 +1,24 @@
 <template>
-  <div class="campaign-list">
-    <h1>EARTH-U Campaign</h1>
-    <p>수돗물 음용을 통한 제로웨이스트 실천 & 기부 캠페인</p>
-    <div class="campaign-type">
-      <p>오프라인</p>
-    </div>
-    <p>2022-06-00~</p>
-  </div>
+  <CampaignList />
   <WaterCampaign />
 </template>
 
 <script>
 import WaterCampaign from "~/components/WaterCampaign";
+import CampaignList from "~/components/CampaignList";
 
 export default {
   components: {
     WaterCampaign,
+    CampaignList,
   },
 };
 </script>
 
 <style>
-.campaign-list {
-  padding: 5px;
-  padding-left: 20px;
-  height: 90px;
-  box-shadow: 0px 5px 5px 0px gray;
-  margin-bottom: 50px;
-}
-.campaign-info {
-  /* background-image: url("../../water_line.png"); */
-}
-
-.bubble {
-  /* position: relative; */
-  text-align: center;
-  position: relative;
-}
-
-.bubble-percent {
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 60px;
-  font-weight: 300;
-  margin-bottom: 0;
-  color: #21334a;
-}
-
-.bubble-percent p {
-  margin-bottom: 0;
-}
-
-.campaign-status-ment {
-  text-align: center;
-  margin-top: 15px;
-  font-size: 23px;
-  font-weight: 350;
-  color: #5d7480;
-}
-
-.bubble img {
-  vertical-align: middle;
-  width: 250px;
-}
-
-.campaign-type {
-  background-color: black;
-  color: white;
-  text-align: center;
-  width: 90px;
-  height: 25px;
-}
-
-.campaign-desc {
-  height: 300px;
-}
-
-.char {
-  /* float: left; */
-  margin-left: 10px;
-  height: 250px;
-  position: absolute;
-}
-
 .bg-img {
   position: fixed;
   bottom: -60px;
   height: 300px;
-}
-
-.campaign-text {
-  float: right;
-  text-align: center;
-  margin-top: 120px;
-  margin-right: 10px;
-  font-size: 23px;
 }
 </style>
