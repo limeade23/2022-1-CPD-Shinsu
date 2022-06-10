@@ -1,24 +1,24 @@
 <template>
-  <div class="campaign-list">
-    <h1>EARTH-U Campaign</h1>
-    <p>수돗물 음용을 통한 제로웨이스트 실천 & 기부 캠페인</p>
-    <div class="campaign-type">
-      <p>오프라인</p>
+  <div class="campaign-info">
+    <div class="bubble">
+      <div class="bubble-percent">
+        <p>21%</p>
+      </div>
+      <img src="status_bubble.png" alt="bubble image" />
     </div>
-    <p>2022-06-00~</p>
+    <div class="campaign-status-ment">
+      <p>아직 부족해요!</p>
+    </div>
+    <div class="campaign-desc">
+      <img class="char" src="char.png" alt="" />
+      <div class="campaign-text">
+        <p>Earth-U 를 마시면 <br />물이 필요한 곳에 기부가 됩니다.</p>
+      </div>
+    </div>
   </div>
-  <WaterCampaign />
 </template>
 
-<script>
-import WaterCampaign from "~/components/WaterCampaign";
-
-export default {
-  components: {
-    WaterCampaign,
-  },
-};
-</script>
+<script></script>
 
 <style>
 .campaign-list {

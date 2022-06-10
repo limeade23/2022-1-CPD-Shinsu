@@ -1,7 +1,21 @@
 <template>
   <h2>캠페인</h2>
+  <div class="wsd"></div>
+  <WaterCampaign />
 </template>
 
-<script></script>
+<script>
+import WaterCampaign from "~/components/WaterCampaign";
 
-<style lang="scss" scoped></style>
+export default {
+  components: {
+    WaterCampaign,
+  },
+};
+</script>
+
+<style lang="scss" scoped>
+.wsd {
+  margin-bottom: 100px;
+}
+</style>
