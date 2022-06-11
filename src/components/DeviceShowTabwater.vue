@@ -4,4 +4,8 @@
 
 <script></script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+h2 {
+  text-align: center;
+}
+</style>
