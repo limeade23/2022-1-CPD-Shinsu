@@ -25,29 +25,29 @@ export default {
       waterStatusData: [
         {
           name: "설치위치",
-          value: "한강공원",
+          value: "위치",
           icon: "fa-solid fa-magnifying-glass",
         },
         {
           name: "수온",
-          value: "17.3",
+          value: "0",
           icon: "",
         },
         {
           name: "pH",
-          value: "7.3",
+          value: "0",
         },
         {
           name: "TDS",
-          value: "17.3",
+          value: "0",
         },
         {
           name: "탁도",
-          value: "5.3",
+          value: "0",
         },
         {
           name: "마신량",
-          value: "10" + "L",
+          value: "0" + "L",
         },
       ],
     };
@@ -65,6 +65,7 @@ export default {
   },
   methods: {
     changeStatus: function (data) {
+      this.waterStatusData[0]["value"] = data.location;
       this.waterStatusData[1]["value"] = data.temper + " C°";
       this.waterStatusData[2]["value"] = data.ph;
       this.waterStatusData[3]["value"] = data.tds + " ppm";
