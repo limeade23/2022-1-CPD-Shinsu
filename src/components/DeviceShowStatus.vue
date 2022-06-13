@@ -12,7 +12,7 @@
     </div>
     <!-- Status Bar -->
     <div class="status-bar status-good">
-      <img src="status_good_bar.png" />
+      <img src="status_good_text.png" />
     </div>
   </div>
   <div v-else class="status-box">
@@ -22,7 +22,7 @@
     </div>
     <!-- Status Bar -->
     <div class="status-bar status-bad">
-      <img src="status_bad_bar.png" />
+      <img src="status_bad_text.png" />
     </div>
   </div>
 </template>
@@ -35,7 +35,7 @@ export default {
 
   data: function () {
     return {
-      waterStatus: false,
+      waterStatus: true,
       model: false,
     };
   },
@@ -80,13 +80,13 @@ export default {
 }
 
 .status-good {
-  background-color: #b4dfed;
-  color: #00a1d8;
+  // background-color: #b4dfed;
+  // color: #00a1d8;
 }
 
 .status-bad {
-  background-color: #efd298;
-  color: #e17401;
+  // background-color: #efd298;
+  // color: #e17401;
 }
 .qrcode {
   float: left;

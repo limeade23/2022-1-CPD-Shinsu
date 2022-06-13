@@ -1,10 +1,12 @@
 <!-- 물 상태 출력 페이지 -->
 <template>
   <!-- 화면 전체를 버튼으로 -->
-  <div class="status-btn" @click="showModal"></div>
+  <!-- <div class="status-btn" @click="showModal"></div> -->
 
   <div class="tab-content">
-    <a-button @click="showModal"> Open modal to close in 5s </a-button>
+    <!-- for debug to modal test -->
+    <!-- <a-button @click="showModal"> Open modal to close in 5s </a-button> -->
+
     <div v-show="currentTab == 0">
       <ShowStatus />
     </div>
