@@ -4,7 +4,7 @@
       <div class="bubble-percent">
         <p>21%</p>
       </div>
-      <img src="status_bubble.png" alt="bubble image" />
+      <img src="water_bubble.png" alt="bubble image" />
     </div>
     <div class="campaign-status-ment">
       <p>아직 부족해요!</p>
