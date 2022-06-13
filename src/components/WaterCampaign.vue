@@ -2,12 +2,12 @@
   <div class="campaign-info">
     <div class="bubble">
       <div class="bubble-percent">
-        <p>21%</p>
+        <p>{{ waterUsage }}</p>
       </div>
       <img src="water_bubble.png" alt="bubble image" />
     </div>
     <div class="campaign-status-ment">
-      <p>아직 부족해요!</p>
+      <p>{{ ment }}</p>
     </div>
     <div class="campaign-desc">
       <img class="char" src="char.png" alt="" />
@@ -18,7 +18,46 @@
   </div>
 </template>
 
-<script></script>
+<script>
+import { getDatabase, ref, onValue } from "firebase/database";
+
+export default {
+  // components: { ShowDetail },
+
+  data: function () {
+    return {
+      waterUsage: "0" + "%",
+      ment: "아직 부족해요!",
+    };
+  },
+  created() {
+    // for debug
+    // console.log(this.$firebase);
+    const db = getDatabase(this.$firebase);
+    const starCountRef = ref(db, "water_status");
+    onValue(starCountRef, (snapshot) => {
+      const data = snapshot.val();
+      this.changeStatus(data);
+    });
+  },
+
+  methods: {
+    changeStatus: function (data) {
+      const usage = Math.ceil(data.usage);
+
+      this.waterUsage = Math.ceil(usage) + "%";
+
+      if (usage > 90) {
+        this.ment = "거의 다 왔어요!";
+      } else if (usage > 50) {
+        this.ment = "절반 왔어요!";
+      } else {
+        this.ment = "아직 부족해요!";
+      }
+    },
+  },
+};
+</script>
 
 <style scope>
 .bubble {

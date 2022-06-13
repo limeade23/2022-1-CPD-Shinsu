@@ -28,7 +28,7 @@
 </template>
 
 <script>
-// import ShowDetail from "~/components/ShowDetailModal";
+import { getDatabase, ref, onValue } from "firebase/database";
 
 export default {
   // components: { ShowDetail },
@@ -39,7 +39,19 @@ export default {
       model: false,
     };
   },
+  created() {
+    // for debug
+    // console.log(this.$firebase);
+    const db = getDatabase(this.$firebase);
+    const starCountRef = ref(db, "water_status");
+    onValue(starCountRef, (snapshot) => {
+      const data = snapshot.val();
+      this.waterStatus = data.ph_status;
+      console.log(data.ph_status);
+    });
+  },
   methods: {
+    // for debug
     change: function () {
       this.waterStatus = !this.waterStatus;
     },

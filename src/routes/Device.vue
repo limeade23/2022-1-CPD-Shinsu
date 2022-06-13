@@ -7,13 +7,13 @@
     <!-- for debug to modal test -->
     <!-- <a-button @click="showModal"> Open modal to close in 5s </a-button> -->
 
-    <div v-show="currentTab == 0">
+    <div v-show="currentTab == 1">
       <ShowStatus />
     </div>
-    <div v-show="currentTab == 1">
+    <div v-show="currentTab == 2">
       <ShowCampaign />
     </div>
-    <div v-show="currentTab == 2">
+    <div v-show="currentTab == 0">
       <ShowTabwater />
     </div>
     <a-modal v-model:visible="statusModal" centered>

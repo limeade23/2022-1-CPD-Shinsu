@@ -1,6 +1,6 @@
 <template>
   <div
-    v-for="val in waterStatus"
+    v-for="val in waterStatusData"
     :key="val.name"
     class="content content-shadow"
   >
@@ -17,10 +17,12 @@
 </template>
 
 <script>
+import { getDatabase, ref, onValue } from "firebase/database";
+
 export default {
   data() {
     return {
-      waterStatus: [
+      waterStatusData: [
         {
           name: "설치위치",
           value: "한강공원",
@@ -36,7 +38,7 @@ export default {
           value: "7.3",
         },
         {
-          name: "TDU",
+          name: "TDS",
           value: "17.3",
         },
         {
@@ -45,10 +47,30 @@ export default {
         },
         {
           name: "마신량",
-          value: "10L",
+          value: "10" + "L",
         },
       ],
     };
+  },
+  created() {
+    // for debug
+    // console.log(this.$firebase);
+    const db = getDatabase(this.$firebase);
+    const starCountRef = ref(db, "water_status");
+    onValue(starCountRef, (snapshot) => {
+      const data = snapshot.val();
+      // console.log(data);
+      this.changeStatus(data);
+    });
+  },
+  methods: {
+    changeStatus: function (data) {
+      this.waterStatusData[1]["value"] = data.temper + " C°";
+      this.waterStatusData[2]["value"] = data.ph;
+      this.waterStatusData[3]["value"] = data.tds + " ppm";
+      this.waterStatusData[4]["value"] = data.turbidity + " NTU";
+      this.waterStatusData[5]["value"] = data.usage + " L";
+    },
   },
 };
 </script>
