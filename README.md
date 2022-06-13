@@ -4,16 +4,6 @@
 - Vue3 + Vuex + Vue-Router
 - ESLint
 
-## 클론 후 .git 삭제하기
-
-```bash
-# macOS
-rm -rf .git
-
-# Windows
-rmdir /s .git
-```
-
 ## 프로젝트 시작 전 패키지 설치
 
 ```bash
