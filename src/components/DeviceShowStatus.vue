@@ -36,7 +36,6 @@ export default {
   data: function () {
     return {
       waterStatus: true,
-      model: false,
     };
   },
   created() {

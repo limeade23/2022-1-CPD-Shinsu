@@ -1,7 +1,7 @@
 <!-- 물 상태 출력 페이지 -->
 <template>
   <!-- 화면 전체를 버튼으로 -->
-  <!-- <div class="status-btn" @click="showModal"></div> -->
+  <div class="status-btn" @click="showModal"></div>
 
   <div class="tab-content">
     <!-- for debug to modal test -->
