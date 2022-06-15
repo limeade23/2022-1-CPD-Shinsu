@@ -4,7 +4,7 @@
     <img src="https://via.placeholder.com/80" alt="qr-code" />
   </div>
   <!-- Water Status Good case -->
-  <button @click="change">테스트</button>
+  <!-- <button @click="change">테스트</button> -->
   <div v-if="waterStatus" class="status-box">
     <!-- Showing Char Status -->
     <div class="status-char-img">
