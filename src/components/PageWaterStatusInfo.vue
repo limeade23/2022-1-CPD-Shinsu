@@ -4,6 +4,7 @@
     :key="val.name"
     class="content content-shadow"
   >
+    <p class="more">더보기 ></p>
     <div class="content-name content-shadow">
       <p>{{ val.name }}</p>
     </div>
@@ -67,8 +68,8 @@ export default {
     changeStatus: function (data) {
       this.waterStatusData[0]["value"] = data.location;
       this.waterStatusData[1]["value"] = data.temper + " C°";
-      this.waterStatusData[2]["value"] = data.ph;
-      this.waterStatusData[3]["value"] = data.tds + " ppm";
+      this.waterStatusData[2]["value"] = data.ph.toFixed(2);
+      this.waterStatusData[3]["value"] = data.tds.toFixed(2) + " ppm";
       this.waterStatusData[4]["value"] = data.turbidity + " NTU";
       this.waterStatusData[5]["value"] = data.usage + " L";
     },
@@ -111,7 +112,7 @@ export default {
 }
 
 .content-shadow {
-  box-shadow: inset 0px 1px 2px 0px gray;
+  box-shadow: inset 0px 1px 2px 0px rgb(112 112 112 / 100%);
 }
 
 .content {
@@ -128,5 +129,13 @@ export default {
 
 .content:hover {
   background-color: #59c6e7;
+}
+
+.more {
+  color: rgb(0 0 0 / 45%);
+  /* float: right; */
+  position: absolute;
+  /* text-align: right; */
+  left: 80%;
 }
 </style>

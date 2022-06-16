@@ -104,13 +104,13 @@ export default {
 }
 
 .campaign-desc {
-  height: 300px;
+  /* height: 300px; */
 }
 
 .char {
   /* float: left; */
-  margin-left: 10px;
-  height: 250px;
+  /* margin-left: 10px; */
+  height: 200px;
   position: absolute;
 }
 
@@ -119,6 +119,6 @@ export default {
   text-align: center;
   margin-top: 120px;
   margin-right: 10px;
-  font-size: 23px;
+  font-size: 20px;
 }
 </style>

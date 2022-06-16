@@ -45,6 +45,6 @@ export default {
 }
 
 .campaign-desc {
-  height: 300px;
+  /* height: 300px; */
 }
 </style>
