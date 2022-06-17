@@ -1,7 +1,8 @@
 <template>
   <!-- QR Code -->
   <div class="qrcode">
-    <img src="https://via.placeholder.com/80" alt="qr-code" />
+    <!-- <img src="https://via.placeholder.com/80" alt="qr-code" /> -->
+    <img src="qrcode.png" alt="qr-code" />
   </div>
   <!-- Water Status Good case -->
   <!-- <button @click="change">테스트</button> -->

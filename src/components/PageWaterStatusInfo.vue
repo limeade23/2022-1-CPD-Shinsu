@@ -4,7 +4,7 @@
     :key="val.name"
     class="content content-shadow"
   >
-    <p class="more">더보기 ></p>
+    <!-- <p class="more">더보기 ></p> -->
     <div class="content-name content-shadow">
       <p>{{ val.name }}</p>
     </div>
