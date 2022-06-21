@@ -1,9 +1,6 @@
 <template>
   <!-- QR Code -->
-  <div class="qrcode">
-    <!-- <img src="https://via.placeholder.com/80" alt="qr-code" /> -->
-    <img src="qrcode.png" alt="qr-code" />
-  </div>
+  <!-- QR move to all page show components -->
   <!-- Water Status Good case -->
   <!-- <button @click="change">테스트</button> -->
   <div v-if="waterStatus" class="status-box">
@@ -43,11 +40,18 @@ export default {
     // for debug
     // console.log(this.$firebase);
     const db = getDatabase(this.$firebase);
-    const starCountRef = ref(db, "water_status");
-    onValue(starCountRef, (snapshot) => {
+    // Use statusRef2 for Gala
+    // const statusRef = ref(db, "water_status");
+    // onValue(statusRef, (snapshot) => {
+    //   const data = snapshot.val();
+    //   this.waterStatus = data.ph_status;
+    //   console.log(data.ph_status);
+    // });
+    const statusRef2 = ref(db, "ph_status");
+    onValue(statusRef2, (snapshot) => {
       const data = snapshot.val();
-      this.waterStatus = data.ph_status;
-      console.log(data.ph_status);
+      this.waterStatus = data;
+      console.log(data);
     });
   },
   methods: {
@@ -99,15 +103,5 @@ export default {
 .status-bad {
   // background-color: #efd298;
   // color: #e17401;
-}
-.qrcode {
-  float: left;
-  position: absolute;
-  margin-top: 30px;
-  margin-left: 30px;
-}
-
-.qrcode img {
-  width: 80px;
 }
 </style>

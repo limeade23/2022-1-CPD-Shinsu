@@ -10,7 +10,7 @@
       <p>{{ ment }}</p>
     </div>
     <div class="campaign-desc">
-      <img class="char" src="char.png" alt="" />
+      <img class="char" src="char.png" alt="방울이" />
       <div class="campaign-text">
         <p>Earth-U 를 마시면 <br />물이 필요한 곳에 기부가 됩니다.</p>
       </div>
@@ -105,13 +105,16 @@ export default {
 
 .campaign-desc {
   /* height: 300px; */
+  background-image: url("/static/water_line.png");
+  padding-bottom: 50px;
+  /* height: 100%; */
 }
 
 .char {
   /* float: left; */
-  /* margin-left: 10px; */
+  margin-left: 10px;
   height: 200px;
-  position: absolute;
+  /* position: absolute; */
 }
 
 .campaign-text {

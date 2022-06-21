@@ -26,11 +26,10 @@ export default {
   data() {
     return {
       waterStatusData: [
-        {
-          name: "설치위치",
-          value: "위치",
-          icon: "fa-solid fa-magnifying-glass",
-        },
+        // {
+        //   name: "설치위치",
+        //   value: "위치",
+        // },
         {
           name: "수온",
           value: "0",
@@ -47,10 +46,6 @@ export default {
         {
           name: "탁도",
           value: "0",
-        },
-        {
-          name: "마신량",
-          value: "0" + "L",
         },
       ],
     };
@@ -73,7 +68,6 @@ export default {
       this.waterStatusData[2]["value"] = data.ph.toFixed(2);
       this.waterStatusData[3]["value"] = data.tds.toFixed(2) + " ppm";
       this.waterStatusData[4]["value"] = data.turbidity + " NTU";
-      this.waterStatusData[5]["value"] = data.usage + " L";
     },
   },
 };
@@ -139,12 +133,5 @@ export default {
   position: absolute;
   /* text-align: right; */
   left: 80%;
-}
-
-.status-contnet-box {
-  /* height: 300px; */
-  background-image: url("/static/water_line.png");
-  padding-bottom: 50px;
-  /* height: 100%; */
 }
 </style>

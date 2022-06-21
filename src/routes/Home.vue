@@ -48,6 +48,6 @@ export default {
 
 .ant-tabs-content-holder {
   padding-top: 10px;
-  padding-bottom: 20px;
+  /* padding-bottom: 20px; */
 }
 </style>

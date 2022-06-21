@@ -1,7 +1,13 @@
 <!-- 물 상태 출력 페이지 -->
 <template>
   <!-- 화면 전체를 버튼으로 -->
-  <!-- <div class="status-btn" @click="showModal"></div> -->
+  <div class="status-btn" @click="showModal"></div>
+
+  <!-- QR Code -->
+  <div class="qrcode">
+    <!-- <img src="https://via.placeholder.com/80" alt="qr-code" /> -->
+    <img src="qrcode.png" alt="qr-code" />
+  </div>
 
   <div class="tab-content">
     <!-- for debug to modal test -->
@@ -17,7 +23,8 @@
       <ShowTabwater />
     </div>
     <a-modal v-model:visible="statusModal" centered>
-      <p>무우우우우울사아아아태에에엥...</p>
+      <!-- <p>무우우우우울사아아아태에에엥...</p> -->
+      <ShowStatusModal />
     </a-modal>
   </div>
 </template>
@@ -26,6 +33,7 @@
 import ShowStatus from "~/components/DeviceShowStatus";
 import ShowCampaign from "~/components/DeviceShowCampaign";
 import ShowTabwater from "~/components/DeviceShowTabwater";
+import ShowStatusModal from "~/components/DeviceStatusModal";
 
 import { defineComponent, ref } from "vue";
 
@@ -34,6 +42,7 @@ export default {
     ShowStatus,
     ShowCampaign,
     ShowTabwater,
+    ShowStatusModal,
   },
   setup() {
     const statusModal = ref(false);
@@ -102,5 +111,15 @@ export default {
 
 .ant-carousel :deep(.slick-slide h3) {
   color: #fff;
+}
+.qrcode {
+  float: left;
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.qrcode img {
+  width: 80px;
 }
 </style>

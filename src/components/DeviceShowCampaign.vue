@@ -1,5 +1,5 @@
 <template>
-  <h2>캠페인</h2>
+  <!-- <h2>캠페인</h2> -->
   <div class="wsd"></div>
   <WaterCampaign />
 </template>
@@ -16,6 +16,6 @@ export default {
 
 <style lang="scss" scoped>
 .wsd {
-  margin-bottom: 100px;
+  height: 222px;
 }
 </style>
