@@ -4,6 +4,6 @@
 **/.vscode/
 **/.DS_Store/
 **/.cache/
-/.firebase
+**/.firebase/
 
 firebaseConfig.js

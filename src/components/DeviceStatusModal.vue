@@ -26,10 +26,6 @@ export default {
   data() {
     return {
       waterStatusData: [
-        // {
-        //   name: "설치위치",
-        //   value: "위치",
-        // },
         {
           name: "수온",
           value: "0",
@@ -63,7 +59,6 @@ export default {
   },
   methods: {
     changeStatus: function (data) {
-      this.waterStatusData[0]["value"] = data.location;
       this.waterStatusData[1]["value"] = data.temper.toFixed(2) + " C°";
       this.waterStatusData[2]["value"] = data.ph.toFixed(2);
       this.waterStatusData[3]["value"] = data.tds.toFixed(2) + " ppm";
@@ -119,7 +114,6 @@ export default {
   margin-bottom: 20px;
   padding: 10px;
   border-radius: 10px;
-  /* box-shadow: inset 0px 1px 2px 0px gray; */
   background-color: #a7e0f1;
 }
 

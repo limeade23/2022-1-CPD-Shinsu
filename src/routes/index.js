@@ -6,6 +6,7 @@ import Home from './Home'
 import Device from './Device'
 import Device2 from './Device2'
 import Device3 from './Device3'
+import ForTest from './ForTest'
 
 export default createRouter({
   history: createWebHistory(),
@@ -27,6 +28,10 @@ export default createRouter({
     {
       path: '/Device3',
       component: Device3
+    },
+    {
+      path: '/admin',
+      component: ForTest
     }
   ]
 })
