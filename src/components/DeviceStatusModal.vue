@@ -59,10 +59,10 @@ export default {
   },
   methods: {
     changeStatus: function (data) {
-      this.waterStatusData[1]["value"] = data.temper.toFixed(2) + " C°";
-      this.waterStatusData[2]["value"] = data.ph.toFixed(2);
-      this.waterStatusData[3]["value"] = data.tds.toFixed(2) + " ppm";
-      this.waterStatusData[4]["value"] = data.turbidity + " NTU";
+      this.waterStatusData[0]["value"] = data.temper.toFixed(2) + " C°";
+      this.waterStatusData[1]["value"] = data.ph.toFixed(2);
+      this.waterStatusData[2]["value"] = data.tds.toFixed(2) + " ppm";
+      this.waterStatusData[3]["value"] = data.turbidity + " NTU";
     },
   },
 };
