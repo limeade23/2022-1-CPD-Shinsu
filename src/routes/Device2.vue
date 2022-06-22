@@ -2,8 +2,6 @@
 <template>
   <div>
     <!-- 캠페인 출력 -->
-    <!-- 물방울 마신거 출력함 -->
-    <!-- <h2>캠페인 출력할거</h2> -->
     <ShowCampaign />
   </div>
 </template>

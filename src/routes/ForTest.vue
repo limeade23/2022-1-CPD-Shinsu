@@ -1,7 +1,8 @@
 <template>
   <a-layout>
     <h2>수동조작용</h2>
-    <button @click="change">변꺼어어어엉</button>
+    <button @click="change">색변경</button>
+    <button @click="changeAdd">리터추가</button>
   </a-layout>
 </template>
 
@@ -12,6 +13,7 @@ export default {
   data: function () {
     return {
       status: null,
+      waterUsage: {},
     };
   },
   created() {
@@ -19,12 +21,12 @@ export default {
     // console.log(this.$firebase);
     const db = getDatabase(this.$firebase);
     // Use statusRef2 for Gala
-    // const statusRef = ref(db, "water_status");
-    // onValue(statusRef, (snapshot) => {
-    //   const data = snapshot.val();
-    //   this.waterStatus = data.ph_status;
-    //   console.log(data.ph_status);
-    // });
+    const statusRef = ref(db, "water_status");
+    onValue(statusRef, (snapshot) => {
+      const data = snapshot.val();
+      this.data = data;
+      this.waterUsage = data.usage;
+    });
     const statusRef2 = ref(db, "ph_status");
     onValue(statusRef2, (snapshot) => {
       const data = snapshot.val();
@@ -34,17 +36,21 @@ export default {
   },
 
   methods: {
-    // for debug
     change: function () {
       const db = getDatabase(this.$firebase);
-      // this.waterStatus = !this.waterStatus;
-      // set(ref(this.db, "/ph_status"), {
-      //   // this.waterStatus;
-      // });
       const updates = {};
       updates["/ph_status"] = !this.status;
-      // return update(ref(db), updates);
       console.log(this.status);
+      update(ref(db), updates);
+    },
+    // Water Add
+    changeAdd: function () {
+      const db = getDatabase(this.$firebase);
+      const updates = {};
+      this.data.usage++;
+      updates["/water_status"] = this.data;
+
+      // console.log(this.data);
       update(ref(db), updates);
     },
   },

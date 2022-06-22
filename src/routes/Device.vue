@@ -10,9 +10,6 @@
   </div>
 
   <div class="tab-content">
-    <!-- for debug to modal test -->
-    <!-- <a-button @click="showModal"> Open modal to close in 5s </a-button> -->
-
     <div v-show="currentTab == 1">
       <ShowStatus />
     </div>
@@ -23,7 +20,6 @@
       <ShowTabwater />
     </div>
     <a-modal v-model:visible="statusModal" centered>
-      <!-- <p>무우우우우울사아아아태에에엥...</p> -->
       <ShowStatusModal />
     </a-modal>
   </div>
