@@ -1,9 +1,9 @@
 export default {
-  apiKey: 'AIzaSyCgZV6iFewA8Qcw0O27ZxvTMUB0yAs4ouU',
-  authDomain: 'hnu-cpd-shinsu.firebaseapp.com',
-  databaseURL: 'https://hnu-cpd-shinsu-default-rtdb.firebaseio.com',
-  projectId: 'hnu-cpd-shinsu',
-  storageBucket: 'hnu-cpd-shinsu.appspot.com',
-  messagingSenderId: '363663062046',
-  appId: '1:363663062046:web:1088387c5703836edfaa0f'
+  apiKey: '',
+  authDomain: '',
+  databaseURL: '',
+  projectId: '',
+  storageBucket: '',
+  messagingSenderId: '',
+  appId: ''
 }
